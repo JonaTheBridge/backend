@@ -27,17 +27,17 @@ router.get('/number/:number', (req, res) => {
   res.json(countries[number]);
 });
 
-router.get('/countries/filter', (req, res) => {
-  const { query } = req;
-  const queryKeys = Object.keys(query);
-  const queryValues = Object.values(query);
+router.get('/filter', (req, res) => {
+  const { query } = req; // { region: 'Americas' }
+  const queryKeys = Object.keys(query); // ['region']
+  const queryValues = Object.values(query); // ['Americas']
   let filteredCountries = countries;
   for (let index = 0; index < queryKeys.length; index++) {
-    const queryKey = queryKeys[index];
-    const queryValue = queryValues[index];
+    const queryKey = queryKeys[index]; // 'region'
+    const queryValue = queryValues[index]; // 'Americas'
     filteredCountries = countries.filter((country) => {
-      const stringifiedValue = JSON.stringify(country[queryKey]);
       const countryValue = country[queryKey];
+      const stringifiedValue = JSON.stringify(countryValue);
       const countryValueType = typeof countryValue;
       const countryValueAsString = countryValueType !== 'string' ? stringifiedValue : countryValue;
       return countryValueAsString === queryValue;
@@ -47,9 +47,7 @@ router.get('/countries/filter', (req, res) => {
   res.json(filteredCountries);
 });
 
-export default router;
-
-router.post('/', (req, res) => {
+router.post('', (req, res) => {
   const country = req.body;
   countries.push(country);
   res.json(country);
@@ -59,10 +57,6 @@ router.put('/:id', (req, res) => {
   const { id } = req.params;
   const newCountry = req.body;
   const index = countries.findIndex((country) => country.id?.toString() === id.toString());
-  console.log(index);
-  console.log(countries[index]);
-  console.log(newCountry);
-
   countries[index] = newCountry;
   res.json(countries[index]);
 });
@@ -81,3 +75,5 @@ router.delete('/:id', (req, res) => {
   countries.splice(index, 1);
   res.json(countries);
 });
+
+export default router;
