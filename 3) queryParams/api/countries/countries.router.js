@@ -36,8 +36,8 @@ router.get('/filter', (req, res) => {
     const queryKey = queryKeys[index];
     const queryValue = queryValues[index];
     filteredCountries = countries.filter((country) => {
-      const stringifiedValue = JSON.stringify(country[queryKey]);
       const countryValue = country[queryKey];
+      const stringifiedValue = JSON.stringify(countryValue);
       const countryValueType = typeof countryValue;
       const countryValueAsString = countryValueType !== 'string' ? stringifiedValue : countryValue;
       return countryValueAsString === queryValue;
