@@ -1,0 +1,7 @@
+Fuente cardinalidad: https://josejuansanchez.org/bd/unidad-03-teoria/index.html#relaciones-con-cardinalidad-11
+Fuente normalizacion: https://openwebinars.net/blog/como-realizar-la-normalizacion-de-bases-de-datos-y-por-que/
+Fuente normalizacion 2: https://programas.cuaed.unam.mx/repositorio/moodle/pluginfile.php/872/mod_resource/content/7/Contenido/index.html
+Fuente normalizacion 3:
+  https://informaticosinlimites.com/base-de-datos/1fn/
+  https://informaticosinlimites.com/base-de-datos/2fn/
+  https://informaticosinlimites.com/base-de-datos/3fn/

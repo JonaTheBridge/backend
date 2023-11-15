@@ -1,0 +1,43 @@
+Una base de datos es un conjunto de tablas. (en mongo colecciones)
+Una tabla está compuesta por registros denominados también como filas o tuplas. (en mongo documentos)
+Un registro está compuesto por campos a los que también se llaman columnas o atributos.
+
+
+
+Para lograrlo, haremos un diseño usando un diagrama:
+
+Una entidad es cualquier objeto o elemento (real o abstracto) acerca del cual se puede guardar información en la base de datos.
+Las entidades se representan con un rectángulo en cuyo interior se escribe el nombre de la entidad.
+
+Cada entidad recibirá un nombre y tendrá una serie de atributos, 
+Los atributos no son más que las características que la definen.
+Estos atributos, sirven para diferenciar una ocurrencia (entidad concreta) de otra.
+
+Una relación, asocia una ocurrencia de una entidad con otra de otra entidad.
+Suelen identificarse con verbos.
+
+Las claves nos permiten acceder a los registros de una tabla.
+Una clave candidata es un campo o una combinación de campos que identifican una fila de forma exclusiva.
+Una clave primaria es una clave candidata que ha sido designada para identificar de forma única los registros de una tabla.
+Una clave foránea o externa se compone de uno o varios atributos, que forman una clave primaria en otra tabla a la cual se desea relacionar.
+
+Relaciones reflexivas, ejemplo empleado/jefe
+Relaciones ternarias, ejemplo comprador/vendedor/coche
+
+
+
+La cardinalidad indica el número relaciones entre ocurrencias.
+
+Participación mínima: mínimo de relaciones de una ocurrencia con otra.
+Una ocurrencia de A estará relacionada como mínimo con 0 ó 1 elemento de B
+
+Participación máxima: máximo de relaciones de una ocurrencia con otra.
+Una ocurrencia de A estará relacionada como máximo con 1 o n (varios)
+
+En las relaciones 1:1 la PK de una entidad pasará como atributo a la otra entidad.
+En caso de que las participaciones sean A(1, 1) y B(1, 0) la PK de A pasa a B.
+En caso de que las participaciones sean A(1, 1) y B(1, 1) da igual la PK que pase.
+
+En las relaciones 1:N la PK de la entidad que participa con cardinalidad 1 pasará como atributo a la otra entidad.
+
+En las relaciones N:N se creará una nueva tabla relacional que contendrá ambas PK

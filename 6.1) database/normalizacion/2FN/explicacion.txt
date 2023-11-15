@@ -1,0 +1,19 @@
+Segunda Forma Normal (2FN)
+  (1FN)
+  Los atributos que no forman parte de ninguna clave han de depender de toda la PK.
+
+  ------------------------------------------------------------------------------------
+
+  Que cumpla la 1FN
+
+  En la segunda forma normal se añade la necesidad de que no existan dependencias funcionales parciales.
+  Esto significa que todos los valores de las columnas de una fila deben depender de la PK de dicha fila,
+  entendiendo por PK los valores de todas las columnas que la formen, en caso de ser más de una.
+
+  Las tablas que disponen de una PK formada por una única columna con un valor indivisible,
+  cumplen ya con la segunda forma normal.
+
+  Ésta afecta exclusivamente a las tablas en las que la PK está formada por dos o más columnas,
+  debiendo asegurarse, en este caso, que todas las demás columnas son accesibles a través 
+  de la clave completa y nunca mediante una parte de esa clave.
+  Ej 2FN.png

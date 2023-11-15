@@ -1,0 +1,14 @@
+Tercera Forma Normal (3FN)
+  (2FN)
+  Los atributos no-clave no pueden depender de forma transitiva de una clave candidata
+  (cuando un atributo que no sea clave depende de una clave primaria a través de otro
+  atributo que no sea clave).
+
+  ------------------------------------------------------------------------------------
+
+  Que cumpla la 2FN
+
+  En cuanto a la tercera forma normal, ésta indica que no deben existir 
+  dependencias transitivas entre las columnas de una tabla, lo cual significa que 
+  las columnas que no forman parte de la clave primaria deben depender sólo de la clave,
+  nunca de otra columna no clave.

@@ -1,0 +1,14 @@
+Primera Forma Normal (1FN)
+  Todos los datos son atómicos (no multivaluados).
+  Todos los atributos o campos, en los distintos registros, son del mismo tipo de datos.
+
+  ------------------------------------------------------------------------------------
+
+  1. Todos los atributos deben ser indivisibles.
+  Ej 1FN_1.png
+
+  2. No deben existir grupos de valores repetidos.
+  En caso de hallarlos, se creará una nueva tabla.
+  Ej 1FN_2.png
+
+
